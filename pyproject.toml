@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "electrum-xrp-desktop"
+version = "0.1.0"
+description = "Desktop XRP Ledger wallet for Windows and Linux"
+requires-python = ">=3.12"
+dependencies = ["PySide6-Essentials==6.12.0", "xrpl-py==5.2.0"]
+
+[project.gui-scripts]
+electrum-xrp = "electrum_xrp.app:main"
+
+[tool.setuptools.packages.find]
+include = ["electrum_xrp*"]
